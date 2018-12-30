@@ -1,3 +1,12 @@
+Idea
+Top theatre performance schools
+scrape - https://www.niche.com/colleges/search/best-colleges-for-theater/
+Layers - school ranking
+         cost per year 
+         program details
+
+
+
 Hello World!
 # Test::Cli
 
