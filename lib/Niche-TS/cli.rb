@@ -27,16 +27,16 @@ class Niche-TS::CLI
 	             input_2 = gets.strip  ##INPUT
 	            
 	            # Invalid input handling
-	            while !(input_2 == 'exit' || input_2 == 'back')
-	                puts "Input was invalid. Please try again."
-	                input_2 = gets.strip
-	            end
+	      while !(input_2 == 'exit' || input_2 == 'back')
+	            puts "Input was invalid. Please try again."
+	             input_2 = gets.strip
+	      end
 	            
-	            if input_2 == "back"
-	                run
-	            end
-	        end
-	    end
+	      if input_2 == "back"
+	         run
+	      end
+	   end
+	 end
 	    
 	    def print_school_list
 	        puts ""
@@ -57,11 +57,14 @@ class Niche-TS::CLI
 	        puts ""
 	        print " #{school.name}, #{school.location} "
 	        puts ""
-	        puts ""
 	        puts "Rank: " + "#{school.rank}"
-	        puts "Average Annual Cost: " + "#{school.cost}”
-	        puts  “Acceptance Rate " + "#{school.acceptance_rate}”
-          puts “Application Cost “ + #{school.application_cost}”
 	        puts ""
-	    end
-	end
+	        puts "Acceptance Rate: " + "#{school.acceptance_rate"
+	        puts ""
+	        puts "Average Annual Cost: " + "#{school.cost}”
+	        
+	   end
+	 end
+	        
+	        
+	       
