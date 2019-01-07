@@ -21,9 +21,9 @@ class Niche-TS::CLI
         end
         
         if input != "exit"
-	            print_resort_detail(Niche-TS::School.find_by_rank(input))
+	            print_school_detail(Niche-TS::School.find_by_rank(input))
 	            
-	            puts "Type 'back' to return to resort list, or 'exit' to quit."
+	            puts "Type 'back' to return to college list, or 'exit' to quit."
 	             input_2 = gets.strip  ##INPUT
 	            
 	            # Invalid input handling
