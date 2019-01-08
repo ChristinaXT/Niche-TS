@@ -13,6 +13,6 @@ class Niche-TS::School
 	        @rank = rank
 	        @url = url
 	        @cost = cost
-                @acceptance_rate = acceptance_rate
+          @acceptance_rate = acceptance_rate
 	        @@all << self
 	    end
