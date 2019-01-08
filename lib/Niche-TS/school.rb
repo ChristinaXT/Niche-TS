@@ -16,3 +16,4 @@ class Niche-TS::School
           @acceptance_rate = acceptance_rate
 	        @@all << self
 	    end
+end 
