@@ -9,7 +9,7 @@ class Niche-TS::CLI
     def run
         print_school_list
         
-        puts "Enter the number of the school you would like to get " \
+        puts "Enter the number of the Theatre school you would like to get " \
         "more information on, or type 'exit' to quit."
 
         input = gets.strip  
@@ -62,6 +62,7 @@ class Niche-TS::CLI
 	        puts "Acceptance Rate: " + "#{school.acceptance_rate"
 	        puts ""
 	        puts "Average Annual Cost: " + "#{school.cost}”
+	        puts "School Website: " + "#{school.url}"
 	        
 	   end
 	 end
