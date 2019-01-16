@@ -1,13 +1,17 @@
-Idea
+Idea Scrape Information about the top 10 Theatre Schools in the United States.
+
 Top theatre performance schools
 scrape - https://www.niche.com/colleges/search/best-colleges-for-theater/
-Layers - school ranking
+Layers - school name
+         school ranking
+         location
+         website
          cost per year 
          program details
 https://www.niche.com/colleges/search/best-colleges-for-theater/
 
 
-Hello World!
+
 # Test::Cli
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/test/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
