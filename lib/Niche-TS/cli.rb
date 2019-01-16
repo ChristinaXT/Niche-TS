@@ -67,7 +67,7 @@ class Niche-TS::CLI
 	        puts "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate}"
 	        puts ""
 	        puts "Average Annual Cost: ".colorize(:blue) + "#{school.cost}”
-	         puts "School Website: ".colorize(:blue) + + "#{school.url}"
+	        puts "School Website: ".colorize(:blue) + "#{school.url}"
 	        
 	   end
 	 end
