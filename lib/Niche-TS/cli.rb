@@ -11,8 +11,8 @@ class Niche-TS::CLI
     def run
         print_school_list
         puts "===========================================" .colorize(:blue)
-        puts "WANT TO KNOW ABOUT THE TOP COLLEGES FOR THEATRE?"
-        puts "ENTER THE NUMBER OF THE THEATRE SCHOOL YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  " 
+        puts "WANT TO KNOW ABOUT THE TOP 10 COLLEGES FOR THEATRE?"
+        puts "ENTER THE NUMBER OF THE THEATRE SCHOOL BY RANK YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  " 
         puts "===========================================" .colorize(:blue)
 
         input = gets.strip  
@@ -64,10 +64,10 @@ class Niche-TS::CLI
 	        puts ""
 	        puts "Rank: ".colorize(:blue) + "#{school.rank}"
 	        puts ""
-	        puts "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate"
+	        puts "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate}"
 	        puts ""
 	        puts "Average Annual Cost: ".colorize(:blue) + "#{school.cost}”
-	        puts "School Website: ".colorize(:blue) + "#{school.url}"
+	         puts "School Website: ".colorize(:blue) + + "#{school.url}"
 	        
 	   end
 	 end
