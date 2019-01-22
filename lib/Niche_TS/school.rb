@@ -1,4 +1,4 @@
-class Niche-TS::School
+class Niche_TS::School
 	
 
 	    attr_accessor :name, :location, :url,  :rank, :cost, :acceptance_rate

@@ -1,9 +1,9 @@
 require 'colorize'
 
-class Niche-TS::CLI
+class Niche_TS::CLI
   
   def call
-        Niche-TS::Scraper.new.create_schools
+        Niche_TS::Scraper.new.create_schools
 
         run
     end
@@ -24,7 +24,7 @@ class Niche-TS::CLI
         end
         
         if input != "exit"
-	            print_school_detail(Niche-TS::School.find_by_rank(input))
+	            print_school_detail(Niche_TS::School.find_by_rank(input))
 	            
 	            puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
 	             input_2 = gets.strip  ##INPUT
@@ -47,7 +47,7 @@ class Niche-TS::CLI
 	        puts ""
 	
 
-         Niche-TS::School.all.each do |school|
+         Niche_TS::School.all.each do |school|
 	       puts "  #{school.rank} " + " #{school.name}, #{school.location}"
 	   end
 	

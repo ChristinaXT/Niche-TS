@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby     #called shebang line
+
+require './lib/Niche_TS'
+
+Niche_TS::CLI.new.call 

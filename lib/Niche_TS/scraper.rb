@@ -1,4 +1,4 @@
-class Niche-TS::Scraper
+class Niche_TS::Scraper
 	
 
 	    def get_page
@@ -11,9 +11,9 @@ class Niche-TS::Scraper
 	    
 	    def create_schools
         scrape_schools_index.each do |school_xml|
-            Niche-TS::School.new_from_index_xml_page(school_xml)
+            Niche_TS::School.new_from_index_xml_page(school_xml)
         end
-        Niche-TS::School.all
+        Niche_TS::School.all
     end
 end
 	    
