@@ -9,7 +9,9 @@ Layers - school name
          cost per year 
          program details
 https://www.niche.com/colleges/search/best-colleges-for-theater/
+-----------------------------------------------------------------------
 
+With this Gem, you will be able to search the Nich.com/colleges/search/best-colleges-for-theater/ site and learn about each of the top ten schools suggested. You can type in the number according to ranking and read about the school's name, address, see a link to their website, read about the cost per year and the program details. Included in these details are campus info, tests and scores required to get in and how hard it is to get in.
 
 
 # Test::Cli
