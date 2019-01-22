@@ -13,7 +13,7 @@ class Niche_TS::School
 	            school_xml.css("div class="<div class="rankings__collection__ranking"><span class="rankings__collection__ordinal">1</span> of<!-- --> 247</div>")[0].text, #rank
 	            "https://www.niche.com/colleges/search/best-colleges-for-theater/" + school_xml.css("<div class="profile__website__label">Website</div>")[0].attribute('href').value, #url
 	            school_xml.css("<span class="bare-value">").text.strip, #description
-	        )
+	          )
 	    end
 	   
 	
@@ -29,12 +29,11 @@ class Niche_TS::School
 	    
 	    def doc
         Nokogiri::HTML(open(self.url))
-    end
+      end
     
-     def self.find_by_rank(search_rank)
+      def self.find_by_rank(search_rank)
         all.each do |school|
             if school.rank == search_rank
                 return school
-            end
-        end
-end 
+      end
+  end
