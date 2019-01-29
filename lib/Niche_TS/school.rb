@@ -37,3 +37,4 @@ class Niche_TS::School
                 return school
       end
   end
+end 

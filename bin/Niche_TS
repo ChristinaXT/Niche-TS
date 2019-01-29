@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby     #called shebang line
+#!/usr/bin/env ruby   
 
 require './lib/Niche_TS'
 
