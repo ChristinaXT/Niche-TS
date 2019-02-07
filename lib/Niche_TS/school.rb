@@ -8,11 +8,11 @@ class Niche_TS::School
 	    
 	    def self.new_from_index_xml(school_xml)
 	        self.new(
-	            school_xml.css("h2 class="search-result__title").text, #name
-	            school_xml.css("<div class="profile__address”>”).text, #location
-	            school_xml.css("div class="<div class="rankings__collection__ranking"><span class="rankings__collection__ordinal">1</span> of<!-- --> 247</div>")[0].text, #rank
-	            "https://www.niche.com/colleges/search/best-colleges-for-theater/" + school_xml.css("<div class="profile__website__label">Website</div>")[0].attribute('href').value, #url
-	            school_xml.css("<span class="bare-value">").text.strip, #description
+	            school_xml.css("h2.search-result__title").text, #name
+	            #school_xml.css("<div class="profile__address”>”).text, #location
+	            school_xml.css("span.search-result-badge-ordinal").text, #rank
+	            "https://www.niche.com/colleges/search/best-colleges-for-theater/" + school_xml.css("a.search-result__link")[0].attribute('href').value, #url
+	            #school_xml.css("<span class="bare-value">").text.strip, #description
 	          )
 	    end
 	   
@@ -37,4 +37,6 @@ class Niche_TS::School
                 return school
       end
   end
+end	      
+	      
 end 
