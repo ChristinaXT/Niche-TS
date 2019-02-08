@@ -6,12 +6,26 @@ class Niche_TS::Scraper
 	    end
 
 	    def scrape_schools_index
-	      self.get_page.css ("#maincontent > div > div > section > div.search-results > ol")
+	      self.get_page.css ("skip-to-main-content__link")
+				#href="#maincontent"
 	    end
 
-			def scrape_schools_details
-				#self.get_page.css
+			def scrape_school_details(school)
+				doc = Nokogiri::HTML(open(url))
+
+				school_details = {
+				:location => doc.css("profile__address").text,
+				:rank => doc.css("span.rankings__collection__ordinal").text,
+	      :url => doc.css("a.profile__website__link").text,
+	 			:cost => doc.css("div.scalar__value").text,
+	 			:acceptance_rate => doc.css("scalar").text,
+
+
+    }
+
 			end
+
+
 
 	    def create_schools
         scrape_schools_index.each do |school_xml|

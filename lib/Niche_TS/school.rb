@@ -9,7 +9,7 @@ class Niche_TS::School
 	    def self.new_from_index_xml(school_xml)
 	        self.new(
 	            school_xml.css("h2.search-result__title").text, #name
-	            #school_xml.css("<div class="profile__address”>”).text, #location
+	            #school_xml.css("div.profile__address”).text, #location
 	            school_xml.css("span.search-result-badge-ordinal").text, #rank
 	            "https://www.niche.com/colleges/search/best-colleges-for-theater/" + school_xml.css("a.search-result__link")[0].attribute('href').value, #url
 	            #school_xml.css("<span class="bare-value">").text.strip, #description

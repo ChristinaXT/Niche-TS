@@ -25,6 +25,7 @@ class Niche_TS::CLI
 
         if input != "exit"
           school = Niche_TS::School.find_by_rank(input)
+              Niche_TS::Scraper.new.scrape_school_details(school)
               print_school_detail(Niche_TS::School.find_by_rank(input))
 
 	            puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
