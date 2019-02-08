@@ -4,7 +4,7 @@ class Niche_TS::CLI
 
   def call
         Niche_TS::Scraper.new.create_schools
-
+        
         run
     end
 

@@ -20,17 +20,15 @@ class Niche_TS::Scraper
 	 			:cost => doc.css("div.scalar__value").text,
 	 			:acceptance_rate => doc.css("scalar").text,
 
-
     }
 
 			end
-
 
 
 	    def create_schools
         scrape_schools_index.each do |school_xml|
             Niche_TS::School.new_from_index_xml_page(school_xml)
         end
-        Niche_TS::School.all
+        Niche_TS::School
     end
 end
