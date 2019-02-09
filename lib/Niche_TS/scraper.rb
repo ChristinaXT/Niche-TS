@@ -11,7 +11,7 @@ class Niche_TS::Scraper
 	    end
 
 			def scrape_school_details(school)
-				doc = Nokogiri::HTML(open(url))
+				doc = Nokogiri::HTML(open(URI))
 
 				school_details = {
 				:location => doc.css("profile__address").text,

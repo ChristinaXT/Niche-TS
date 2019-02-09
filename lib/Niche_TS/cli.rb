@@ -10,10 +10,10 @@ class Niche_TS::CLI
 
     def run
         print_school_list
-        puts "===========================================" .colorize(:blue)
+        puts "====================================================================" .colorize(:blue)
         puts "WANT TO KNOW ABOUT THE TOP 10 COLLEGES FOR THEATRE?"
         puts "ENTER THE NUMBER OF THE THEATRE SCHOOL BY RANK YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  "
-        puts "===========================================" .colorize(:blue)
+        puts "====================================================================" .colorize(:blue)
 
         input = gets.strip
 
