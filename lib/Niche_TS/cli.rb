@@ -10,15 +10,15 @@ class Niche_TS::CLI
 
     def run
         print_school_list
-        puts "====================================================================" .colorize(:blue)
-        puts "WANT TO KNOW ABOUT THE TOP 10 COLLEGES FOR THEATRE?"
+        puts "=======================================================================" .colorize(:blue)
+        puts "WANT TO KNOW ABOUT THE TOP 25 COLLEGES FOR THEATRE?"
         puts "ENTER THE NUMBER OF THE THEATRE SCHOOL BY RANK YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  "
-        puts "====================================================================" .colorize(:blue)
+        puts "=======================================================================" .colorize(:blue)
 
         input = gets.strip
 
         # Invalid input handling
-        while !(input == 'exit' || input.to_i >= 1 && input.to_i <= 10)
+        while !(input == 'exit' || input.to_i >= 1 && input.to_i <= 25)
             puts "Input was invalid. Please try again."
             input = gets.strip
         end
@@ -60,16 +60,17 @@ class Niche_TS::CLI
 
 	    def print_school_detail(school)
 	        puts ""
-	        print "__________________________".colorize(:blue)
-	        print " #{school.name}, #{school.location} "
-	        print "__________________________".colorize(:blue)
+	        print "Name: " .colorize(:blue) + "#{school.name}"
 	        puts ""
-	        puts "Rank: ".colorize(:blue) + "#{school.rank}"
+	        print "Location:" .colorize(:green) + "#{school.location}"
 	        puts ""
-	        puts "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate}"
+	        print "Rank: ".colorize(:red) + "#{school.rank}"
 	        puts ""
-	        puts "Average Annual Cost: ".colorize(:blue) + "#{school.cost}"
-	        puts "School Website: ".colorize(:blue) + "#{school.url}"
+	        print "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate}"
+	        puts ""
+	        print "Average Annual Cost: ".colorize(:red) + "#{school.cost}"
+	        puts ""
+	        print "School Website: ".colorize(:green) + "#{school.url}"
 
 	   end
 	 end

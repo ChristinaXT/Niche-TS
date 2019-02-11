@@ -1,7 +1,7 @@
 class Niche_TS::School
 	
 	  @@all = []
-
+  
 	    attr_accessor :name, :location, :url,  :rank, :cost, :acceptance_rate
 	
 	    def self.all
@@ -22,10 +22,8 @@ class Niche_TS::School
 	
 	    def initialize(name=nil, rank=nil, url=nil)
 	        @name = name
-	   
 	        @rank = rank
 	        @url = url
-	        
 	        @@all << self
 	    end
 	    

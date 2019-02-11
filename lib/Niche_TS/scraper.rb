@@ -13,15 +13,13 @@ class Niche_TS::Scraper
     
 			def scrape_school_details(school)
 				url = school.url
-				binding.pry
+				#binding.pry
 				doc = Nokogiri::HTML(open(url))
         
 			
-				school.location = doc.css("profile__address").text
-				
-	 			cost = doc.css("div.scalar__value").text
-	 			acceptance_rate = doc.css("scalar").text
-
+				school.location = doc.css("div.profile__address").text
+	 			school.cost = doc.css("div.scalar").text
+	 			school.acceptance_rate = doc.css("div.scalar__value").text
   
 
 			end
