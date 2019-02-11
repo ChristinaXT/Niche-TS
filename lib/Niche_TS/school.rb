@@ -9,24 +9,23 @@ class Niche_TS::School
       end
 
 	    
-	   def self.new_from_index_xml(school_xml)
+	   def self.new_from_index_xml_page(school_xml)
 	        self.new(
 	            school_xml.css("h2.search-result__title").text, #name
 	            school_xml.css("span.search-result-badge-ordinal").text, #rank
 	            
-	            #"https://www.niche.com/colleges/search/best-colleges-for-theater/" + school_xml.css("a.search-result__link")[0].attribute('href').value, #url
+	            school_xml.css("a.search-result__link")[0].attribute('href').value, #url
 	            
 	          )
 	    end
 	   
 	
-	    def initialize(name=nil, location=nil, rank=nil, url=nil, cost=nil, acceptance_rate=nil)
+	    def initialize(name=nil, rank=nil, url=nil)
 	        @name = name
-	        @location = location
+	   
 	        @rank = rank
 	        @url = url
-	        @cost = cost
-          @acceptance_rate = acceptance_rate
+	        
 	        @@all << self
 	    end
 	    
