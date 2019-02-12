@@ -71,6 +71,8 @@ class Niche_TS::CLI
 	        puts ""
 	        puts "Average Annual Cost: ".colorize(:magenta) + "#{school.cost}"
 	        puts ""
+	        puts "Program Description: ".colorize(:yellow) + "#{school.description}"
+	        puts ""
 	        puts "School Website: ".colorize(:blue) + "#{school.url}"
 	   end
 	 end

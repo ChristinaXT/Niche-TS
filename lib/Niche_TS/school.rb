@@ -2,7 +2,7 @@ class Niche_TS::School
 	
 	  @@all = []
   
-	    attr_accessor :name, :location, :url,  :rank, :cost, :acceptance_rate
+	    attr_accessor :name, :rank, :location,  :acceptance_rate, :cost, :description, :url
 	
 	    def self.all
     @@all
@@ -12,11 +12,11 @@ class Niche_TS::School
 	   def self.new_from_index_xml_page(school_xml)
 	        self.new(
 	          
-	            school_xml.css("h2.search-result__title").text #name
-	            school_xml.css("span.search-result-badge-ordinal").text #rank
-	            school_xml.css("li.search-result-tagline_item").text #location
-	            school_xml.css("div.search-result-fact").text #acceptance_rate
-	            school_xml.css("span.search-result-fact__value").text #cost
+	            school_xml.css("h2.search-result__title").text, #name
+	            school_xml.css("span.search-result-badge-ordinal").text, #rank
+	            school_xml.css("li.search-result-tagline_item").text, #location
+	            school_xml.css("div.search-result-fact").text, #acceptance_rate
+	            school_xml.css("span.search-result-fact__value").text, #cost
 	            school_xml.css("a.search-result__link")[0].attribute('href').value #url
 	          )
 	    end
@@ -44,4 +44,3 @@ class Niche_TS::School
 end	      
 	      
 end 
-end
