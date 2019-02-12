@@ -51,7 +51,7 @@ class Niche_TS::CLI
 
 
          Niche_TS::School.all.each do |school|
-	       puts "  #{school.rank} " + " #{school.name}, #{school.location}"
+	       puts "  #{school.rank} " + " #{school.name} "
 	   end
 
 
