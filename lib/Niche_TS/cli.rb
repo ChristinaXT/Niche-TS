@@ -61,17 +61,16 @@ class Niche_TS::CLI
 
 	    def print_school_detail(school)
 	        puts ""
-	        print "Name: " .colorize(:blue) + "#{school.name}"
+	        puts "Name: " .colorize(:blue) + "#{school.name}"
 	        puts ""
-	        print "Location:" .colorize(:green) + "#{school.location}"
+	        puts "Location:" .colorize(:green) + "" + "#{school.location}"
 	        puts ""
-	        print "Rank: ".colorize(:red) + "#{school.rank}"
+	        puts "Rank: ".colorize(:red) + "#{school.rank}"
 	        puts ""
-	        print "Acceptance Rate: ".colorize(:blue) + "#{school.acceptance_rate}"
+	        puts "Acceptance Rate: ".colorize(:cyan) + "#{school.acceptance_rate}"
 	        puts ""
-	        print "Average Annual Cost: ".colorize(:red) + "#{school.cost}"
+	        puts "Average Annual Cost: ".colorize(:magenta) + "#{school.cost}"
 	        puts ""
-	        print "School Website: ".colorize(:green) + "#{school.url}"
-
+	        puts "School Website: ".colorize(:blue) + "#{school.url}"
 	   end
 	 end
