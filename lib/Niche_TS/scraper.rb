@@ -16,12 +16,8 @@ class Niche_TS::Scraper
 				#binding.pry
 				doc = Nokogiri::HTML(open(url))
         
-			
-				school.location = doc.css("div.profile__address").text
-	 			school.cost = doc.css("div.scalar").text
-	 			school.acceptance_rate = doc.css("div.scalar__value").text
-  
-
+				school.description = doc.css("span.bare-value").text
+	 			
 			end
 
 
