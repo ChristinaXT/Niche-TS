@@ -63,7 +63,7 @@ class Niche_TS::CLI
 	        puts ""
 	        puts "Name: " .colorize(:blue) + "#{school.name}"
 	        puts ""
-	        puts "Location:" .colorize(:green) + "" + "#{school.location}"
+	        puts "Location:" .colorize(:green)  + "#{school.location}"
 	        puts ""
 	        puts "Rank: ".colorize(:red) + "#{school.rank}"
 	        puts ""
