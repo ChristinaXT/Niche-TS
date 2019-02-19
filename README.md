@@ -1,4 +1,4 @@
-Idea Scrape Information about the top 10 Theatre Schools in the United States.
+This Cli Data Gem project is designed to provide access to the top 25 theatre schools by rank from the Niche.Com website. By choosing a school by rank, you can learn about the location, cost per year, acceptance rate and program details. 
 
 Top theatre performance schools
 scrape - https://www.niche.com/colleges/search/best-colleges-for-theater/
@@ -11,7 +11,7 @@ Layers - school name
 https://www.niche.com/colleges/search/best-colleges-for-theater/
 -----------------------------------------------------------------------
 
-With this Gem, you will be able to search the Nich.com/colleges/search/best-colleges-for-theater/ site and learn about each of the top ten schools suggested. You can type in the number according to ranking and read about the school's name, address, see a link to their website, read about the cost per year and the program details. Included in these details are campus info, tests and scores required to get in and how hard it is to get in.
+With this Gem, you will be able to search the Nich.com/colleges/search/best-colleges-for-theater/ site and learn about each of the top 25 schools suggested. You can type in the number according to ranking and read about the school's name, address, see a link to their website, read about the cost per year and the program details. Included in these details are campus info, tests and scores required to get in and how hard it is to get in.
 
 
 # Test::Cli
