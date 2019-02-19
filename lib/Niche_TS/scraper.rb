@@ -6,25 +6,20 @@ class Niche_TS::Scraper
 	    end
 
 	    def scrape_schools_index
-	      self.get_page.css("div.search-result")
-			
+	      self.get_page.css("div.search-result")	
 	    end
 
     
-			def scrape_school_details(school)
-				url = school.url
-				#binding.pry
-				doc = Nokogiri::HTML(open(url))
-        
-				school.description = doc.css("span.bare-value").text
-	 			
-			end
-
+	    def scrape_school_details(school)
+		url = school.url
+		doc = Nokogiri::HTML(open(url))
+		school.description = doc.css("span.bare-value").text
+	    end
 
 	    def create_schools
-        scrape_schools_index.each do |school_xml|
-            Niche_TS::School.new_from_index_xml_page(school_xml)
-        end
+                scrape_schools_index.each do |school_xml|
+                Niche_TS::School.new_from_index_xml_page(school_xml)
+           end
         Niche_TS::School
     end
 end
