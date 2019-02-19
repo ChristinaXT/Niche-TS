@@ -5,8 +5,8 @@ class Niche_TS::School
 	    attr_accessor :name, :rank, :location,  :acceptance_rate, :cost, :description, :url
 	
 	    def self.all
-    @@all
-      end
+             @@all
+            end
 
 	    
 	   def self.new_from_index_xml_page(school_xml)
@@ -32,15 +32,15 @@ class Niche_TS::School
 	    end
 	    
 	    def doc
-        Nokogiri::HTML(open(self.url))
-      end
+              Nokogiri::HTML(open(self.url))
+            end
     
-      def self.find_by_rank(search_rank)
-        all.each do |school|
-            if school.rank == search_rank
+           def self.find_by_rank(search_rank)
+             all.each do |school|
+             if school.rank == search_rank
                 return school
-      end
-  end
-end	      
+           end
+     end
+  end	      
 	      
 end 
