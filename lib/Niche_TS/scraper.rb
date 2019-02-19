@@ -11,15 +11,15 @@ class Niche_TS::Scraper
 
     
 	    def scrape_school_details(school)
-		url = school.url
-		doc = Nokogiri::HTML(open(url))
-		school.description = doc.css("span.bare-value").text
+		      url = school.url
+		      doc = Nokogiri::HTML(open(url))
+		      school.description = doc.css("span.bare-value").text
 	    end
 
 	    def create_schools
                 scrape_schools_index.each do |school_xml|
                 Niche_TS::School.new_from_index_xml_page(school_xml)
-           end
+      end
         Niche_TS::School
     end
 end

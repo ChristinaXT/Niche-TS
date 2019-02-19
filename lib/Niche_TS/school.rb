@@ -6,10 +6,10 @@ class Niche_TS::School
 	
 	    def self.all
              @@all
-            end
+      end
 
 	    
-	   def self.new_from_index_xml_page(school_xml)
+	    def self.new_from_index_xml_page(school_xml)
 	        self.new(
 	          
 	            school_xml.css("h2.search-result__title").text, #name

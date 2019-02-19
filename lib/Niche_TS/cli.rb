@@ -33,12 +33,12 @@ class Niche_TS::CLI
 	      input_2 = gets.strip  ##INPUT
 
 	            # Invalid input handling
-	while !(input_2 == 'exit' || input_2 == 'back')
+      	while !(input_2 == 'exit' || input_2 == 'back')
 	      puts "Input was invalid. Please try again.".colorize(:red)
 	      input_2 = gets.strip
 	      end
 
-	if input_2 == "back"
+	      if input_2 == "back"
 	         run
 	      end
 	   end
