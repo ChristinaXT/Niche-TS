@@ -6,9 +6,9 @@ class Niche_TS::CLI
         Niche_TS::Scraper.new.create_schools
         
         run
-    end
+   end
 
-    def run
+   def run
         print_school_list
         puts "=======================================================================" .colorize(:blue)
         puts "WANT TO KNOW ABOUT THE TOP 25 COLLEGES FOR THEATRE?"
@@ -29,16 +29,16 @@ class Niche_TS::CLI
               Niche_TS::Scraper.new.scrape_school_details(school)
               print_school_detail(Niche_TS::School.find_by_rank(input))
 
-	            puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
-	             input_2 = gets.strip  ##INPUT
+	      puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
+	      input_2 = gets.strip  ##INPUT
 
 	            # Invalid input handling
-	      while !(input_2 == 'exit' || input_2 == 'back')
-	            puts "Input was invalid. Please try again.".colorize(:red)
-	             input_2 = gets.strip
+	while !(input_2 == 'exit' || input_2 == 'back')
+	      puts "Input was invalid. Please try again.".colorize(:red)
+	      input_2 = gets.strip
 	      end
 
-	      if input_2 == "back"
+	if input_2 == "back"
 	         run
 	      end
 	   end
