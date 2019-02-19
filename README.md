@@ -1,4 +1,6 @@
 CLI data Gem Project Ruby -
+
+
 This Cli Data Gem project is designed to provide access to the top 25 theatre schools by rank from the Niche.Com website. By choosing a school by rank, you can learn about the location, cost per year, acceptance rate and program details. 
 
 Top theatre performance schools
