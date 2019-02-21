@@ -7,14 +7,15 @@ class Niche_TS::School
 	    def self.all
              @@all
       end
-	
-	    def initialize(name=nil, rank=nil, location=nil, acceptance_rate=nil, cost=nil, url=nil)
+      
+    def initialize(name=nil, rank=nil, location=nil, acceptance_rate=nil, cost=nil, url=nil, description=nil)
 	        @name = name
 	        @rank = rank
 	        @location = location
 	        @acceptance_rate = acceptance_rate
 	        @cost = cost
 	        @url = url
+	        @description = description
 	        @@all << self
 	    end
 	    
