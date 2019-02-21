@@ -50,7 +50,7 @@ class Niche_TS::CLI
 	        puts ""
 
 
-         Niche_TS::School.all.each do |school|
+         Niche_TS::Scraper.all.each do |school|
 	       puts "  #{school.rank} " + " #{school.name} "
 	   end
 
