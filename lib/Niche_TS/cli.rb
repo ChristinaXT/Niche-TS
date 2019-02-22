@@ -19,7 +19,7 @@ class Niche_TS::CLI
      input = gets.strip
 
      # Invalid input handling
-     while !(input == 'exit' || input.to_i >= 1 && input.to_i <= 25)
+     while !(input == 'exit' || input.length)
        puts "Input was invalid. Please try again."
        input = gets.strip
      end
