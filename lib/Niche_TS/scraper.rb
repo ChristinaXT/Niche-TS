@@ -9,7 +9,7 @@ class Niche_TS::Scraper
     
 	 def scrape_school_details(school)
 		 @@school = school
-		 doc = Nokogiri::HTML(open("https://www.niche.com/colleges/search/best-colleges-for-theater/"))
+		 doc = Nokogiri::HTML(open(school.url))
 		 school.description = doc.css("span.bare-value").text
 	 end
        
