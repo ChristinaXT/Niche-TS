@@ -8,7 +8,8 @@ class Niche_TS::Scraper
 	 end
     
 	 def scrape_school_details(school)
-		 @@school = school
+	   @url = school.url
+		# @@school = school
 		 doc = Nokogiri::HTML(open(school.url))
 		 school.description = doc.css("span.bare-value").text
 	 end
