@@ -6,31 +6,31 @@ class Niche_TS::CLI
     Niche_TS::Scraper.new.create_schools
         
       run
-   end
+  end
 
-   def run
-     print_school_list
-     puts "=======================================================================" .colorize(:blue)
-     puts "WANT TO KNOW ABOUT THE TOP 25 COLLEGES FOR THEATRE?"
-     puts "ENTER THE NUMBER OF THE THEATRE SCHOOL BY RANK"
-     puts "YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  "
-     puts "=======================================================================" .colorize(:blue)
+  def run
+    print_school_list
+    puts "=======================================================================" .colorize(:blue)
+    puts "WANT TO KNOW ABOUT THE TOP 25 COLLEGES FOR THEATRE?"
+    puts "ENTER THE NUMBER OF THE THEATRE SCHOOL BY RANK"
+    puts "YOU WOULD LIKE TO GET MORE INFORMATION ON, OR TYPE 'EXIT' TO QUIT.  "
+    puts "=======================================================================" .colorize(:blue)
 
-     input = gets.strip
+    input = gets.strip
 
      # Invalid input handling
-     while !(input == 'exit' || input.length)
-       puts "Input was invalid. Please try again."
-       input = gets.strip
-     end
+    while !(input == 'exit' || input.length)
+      puts "Input was invalid. Please try again."
+      input = gets.strip
+    end
 
-      if input != "exit"
-        school = Niche_TS::School.find_by_rank(input)
-        Niche_TS::Scraper.new.scrape_school_details(school)
-        print_school_detail(Niche_TS::School.find_by_rank(input))
+    if input != "exit"
+      school = Niche_TS::School.find_by_rank(input)
+      Niche_TS::Scraper.new.scrape_school_details(school)[0]
+      print_school_detail(Niche_TS::School.find_by_rank(input))
 
-	      puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
-	      input_2 = gets.strip  ##INPUT
+	     puts "Type 'back' to return to college list, or 'exit' to quit.".colorize(:yellow)
+	     input_2 = gets.strip  ##INPUT
 
 	      # Invalid input handling
       	while !(input_2 == 'exit' || input_2 == 'back')
@@ -49,7 +49,7 @@ class Niche_TS::CLI
 	      puts "------ Niche.com 2019 Best Colleges for Performing Arts in America ------".colorize(:yellow)
 	      puts ""
 
-        Niche_TS::School.all.map do |school|[0]
+        Niche_TS::School.all.map do |school|
 	      puts "  #{school.rank} " + " #{school.name} "
 	      end
 	      puts ""
