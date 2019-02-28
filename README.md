@@ -33,7 +33,7 @@ Or install it yourself as:
 
 ## Usage
 
-With this Gem, you will be able to search the Nich.com/colleges/search/best-colleges-for-theater/ site and learn about each of the top 25 schools suggested. You can type in the number according to ranking and read about the school's name, address, see a link to their website, read about the cost per year and the program details. Included in these details are campus info, tests and scores required to get in and how hard it is to get in.
+With this Gem, you will be able to search the Niche.com/colleges/search/best-colleges-for-theater/ site and learn about each of the top 25 schools suggested. You can type in the number according to ranking and read about the school's name, address, see a link to their website, read about the cost per year and the program details. Included in these details are campus info, tests and scores required to get in and how hard it is to get in.
 
 
 
