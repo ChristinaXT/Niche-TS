@@ -20,10 +20,7 @@ class Niche_TS::School
 	  end
 	    
 	  def self.find_by_rank(search_rank)
-      all.map do |school|
-        if school.rank == search_rank
-         return school
-         end
-        end
+      @@all.select do |school|
+        school.rank == search_rank
     end	      
 end 
