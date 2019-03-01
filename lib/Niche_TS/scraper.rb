@@ -21,6 +21,7 @@ class Niche_TS::Scraper
     
   def self.new_from_index_xml_page(school_xml)
 	   Niche_TS::School.new(
+	    
 	    school_xml.css("h2.search-result__title").text, #name
 	    school_xml.css("span.search-result-badge-ordinal").text, #rank
 	    school_xml.css("li.search-result-tagline__item")[1].text, #location

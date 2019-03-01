@@ -49,8 +49,8 @@ class Niche_TS::CLI
 	      puts "------ Niche.com 2019 Best Colleges for Performing Arts in America ------".colorize(:yellow)
 	      puts ""
 
-        Niche_TS::School.all.map do |school|
-	      puts "  #{school.rank} " + " #{school.name} "
+        Niche_TS::School.all.each do |school|
+	      puts " #{school.rank} " + " #{school.name} "
 	      end
 	      puts ""
 	    end
