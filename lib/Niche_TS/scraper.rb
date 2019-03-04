@@ -6,8 +6,9 @@ class Niche_TS::Scraper
 	 def scrape_schools_index
 	   self.get_page.css("div.search-result")	
 	 end
-    
+  
 	 def scrape_school_details(school)
+	   url = school.url
 		 doc = Nokogiri::HTML(open(school.url))
 		 school.description = doc.css("span.bare-value").text
 	 end
@@ -23,7 +24,7 @@ class Niche_TS::Scraper
 	   Niche_TS::School.new(
 	    
 	    school_xml.css("h2.search-result__title").text, #name
-	    school_xml.css("span.search-result-badge-ordinal").text, #rank
+	    school_xml.css("div.search-result-badge")[0].text, #rank
 	    school_xml.css("li.search-result-tagline__item")[1].text, #location
 	    school_xml.css("div.search-result-fact")[0].text, #acceptance_rate
 	    school_xml.css("div.search-result-fact")[1].text, #cost
@@ -33,6 +34,6 @@ class Niche_TS::Scraper
 	    
 	def doc
     Nokogiri::HTML(open(self.url))
-  end
+   end
      
 end
