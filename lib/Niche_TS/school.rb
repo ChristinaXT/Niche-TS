@@ -19,12 +19,12 @@ class Niche_TS::School
 	    @@all << self
 	  end
 	    
-	   def self.find_by_rank(search_rank)
-      all.each do |school|
-        if school.rank == search_rank
-        return school
-        end	 
-    end
-  end
+	 def self.find_by_rank(search_rank)
+     all.each do |school|
+      if school.rank.gsub("#", "") == search_rank
+      return school
+      end	 
+      end
+   end
 end 
 

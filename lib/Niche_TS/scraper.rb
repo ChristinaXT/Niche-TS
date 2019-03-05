@@ -24,7 +24,7 @@ class Niche_TS::Scraper
 	   Niche_TS::School.new(
 	    
 	    school_xml.css("h2.search-result__title").text, #name
-	    school_xml.css("div.search-result-badge")[0].text, #rank school_xml.grep(Integer),
+	    school_xml.css("div.search-result-badge")[0].text.gsub(" Best Colleges for Performing Arts in America",""), #rank 
 	    school_xml.css("li.search-result-tagline__item")[1].text, #location
 	    school_xml.css("div.search-result-fact")[0].text, #acceptance_rate
 	    school_xml.css("div.search-result-fact")[1].text, #cost
@@ -34,6 +34,6 @@ class Niche_TS::Scraper
 	    
 	def doc
     Nokogiri::HTML(open(self.url))
-   end
+  end
      
 end
