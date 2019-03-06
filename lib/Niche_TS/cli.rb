@@ -18,9 +18,9 @@ class Niche_TS::CLI
     puts "=======================================================================" .colorize(:blue)
 
     input = gets.strip
-
+  #binding.pry
      # Invalid input handling
-    while !(input == 'exit' || input.length)
+    while !(input == 'exit' || input == Niche_TS::School.all.length)
       puts "Input was invalid. Please try again."
       input = gets.strip
     end
