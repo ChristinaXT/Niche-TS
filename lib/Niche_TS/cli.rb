@@ -20,7 +20,7 @@ class Niche_TS::CLI
     input = gets.strip
 
      # Invalid input handling
-    while !(input == 'exit' || input == Niche_TS::School.all.length)
+    while !(input == 'exit' || input.length)
       puts "Input was invalid. Please try again."
       input = gets.strip
     end
